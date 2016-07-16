@@ -1,0 +1,24 @@
+<h1>Create a Mini Url</h1>
+<%= link_to "View all MiniUrl's", urls_path %>
+<% if flash[:notice] %>
+	<div class="notice"><strong><%= flash[:notice] %></strong></div>
+<% end %>
+<p>Enter the external Url you want redirected to below and we'll generate you a Mini Url in return.</p>
+<%= form_for :url, url: urls_path do |f| %>
+	<p>
+		<%= f.label :external_url %>
+		<%= f.text_field :external %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
+<% if @url.errors.any? %>
+	<div id="error_explanation">
+		<p>
+		<% @url.errors.full_messages.each do |message| %>
+			<%= message %><br />
+		<% end %>
+		</p>
+	</div>
+<% end %>

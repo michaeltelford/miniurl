@@ -1,0 +1,21 @@
+<h1>Listing Mini Urls</h1>
+<%= link_to "Create MiniUrl", new_url_path %>
+<br />
+<p>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>External</th>
+			<th>Internal</th>
+			<th>Full URL</th>
+		</tr>
+		<% @urls.each do |url| %>
+			<tr>
+				<td><%= url.id %></td>
+				<td><%= url.external %></td>
+				<td><%= url.internal %></td>
+				<td><%= link_to url.full_internal, url.full_internal, :target => "_blank" %></td>
+			</tr>
+		<% end %>
+	</table>
+<p/>

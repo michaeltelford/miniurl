@@ -1,0 +1,12 @@
+<h1>Mini Url Created</h1>
+<%= link_to 'Home', controller: 'welcome' %>
+<p>Below are your Mini Url details:</p>
+<p>
+	<strong>Internal: </strong>
+	<a href="<%= @url.full_internal %>" target="_blank"><%= @url.full_internal %></a>
+	<br />
+	redirects to
+	<br />
+	<strong>External: </strong>
+	<%= @url.external %>
+</p>

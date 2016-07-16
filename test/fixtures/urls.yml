@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+google:
+  id: 1
+  internal: syfd34kv
+  external: http://www.google.co.uk
+
+yahoo:
+  id: 2
+  internal: snfr48hs
+  external: http://www.yahoo.co.uk
+
+bing:
+  id: 3
+  internal: sdar16kw
+  external: http://www.bing.com
