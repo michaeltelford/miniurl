@@ -1,0 +1,9 @@
+## Customize the test machine
+machine:
+
+  timezone:
+    UK/London
+
+  ruby:
+    version:
+      2.2.2
